@@ -1,1 +1,15 @@
-<p>aqui iria un empleado</p>
+<p>Nombre del Empleado: {{ nombre }}</p>
+<p>Apellido del Empleado: {{ apellido }}</p>
+<p>
+  Edad del Empleado: {{ edad > 18 ? "Es mayor de edad" : "Es menor de edad" }}
+</p>
+<p>Empresa del Empleado: {{ empresa.value }}</p>
+<br />
+<br />
+Introduce una Empresa:
+<input type="text" #empresa (keyup)="(0)" [disabled]="oli" />
+<br />
+<br />
+Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado" />
+
+{{ getRegistroUsuario() }}
